@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Grayscale Toggle Extension",
+    "version": "1.0",
+    "description": "Toggle YouTube grayscale (black and white) via a popup toggle button.",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.youtube.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "scripting"
+    ]
+}
